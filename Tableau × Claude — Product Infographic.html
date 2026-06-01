@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/desta/Downloads/infographic_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=1200">
+<title>Tableau × Claude — Product Infographic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Tableau × Claude — Product Infographic_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{background:#e8e4dc;}
+body{
+  width:1200px;
+  margin:0 auto;
+  font-family:'Outfit',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background:#f5f1eb;
+}
+
+/* ── TOKENS ── */
+:root{
+  --navy:    #161f38;
+  --navy2:   #1e2d50;
+  --navy3:   #253566;
+  --amber:   #c4821e;
+  --amberL:  #e0a040;
+  --amberBg: #fef5e4;
+  --cream:   #f5f1eb;
+  --cream2:  #ede9e1;
+  --white:   #fffcf8;
+  --ink:     #1a1714;
+  --ink2:    #3a3730;
+  --ink3:    #706c63;
+  --ink4:    #a8a49c;
+  --gold:    #c4a050;
+  --serif:   'Lora',Georgia,serif;
+  --mono:    'JetBrains Mono',monospace;
+  --body:    'Outfit',system-ui,sans-serif;
+}
+
+/* ════════════════════════════════════
+   SECTION 1 — HERO
+════════════════════════════════════ */
+#hero{
+  background: var(--navy);
+  position:relative;overflow:hidden;
+  padding: 48px 60px 44px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:40px;
+  align-items:center;
+}
+
+/* Decorative background grid */
+#hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;
+}
+
+/* Large decorative glyph */
+.hero-bg-glyph{
+  position:absolute;
+  right:-20px; top:-30px;
+  font-family:var(--serif);
+  font-size:320px;
+  color:rgba(196,130,30,.08);
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+  letter-spacing:-10px;
+}
+
+/* Accent rule */
+.hero-rule{
+  width:48px;height:3px;
+  background:linear-gradient(90deg,var(--amber),var(--amberL));
+  border-radius:2px;
+  margin-bottom:16px;
+}
+
+.hero-left .eyebrow{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(196,130,30,.9);
+  margin-bottom:14px;
+}
+
+.hero-left h1{
+  font-family:var(--serif);
+  font-size:52px;font-weight:700;
+  color:#fff;
+  line-height:1.1;
+  letter-spacing:-1px;
+  margin-bottom:18px;
+}
+
+.hero-left h1 .x{
+  color:var(--amberL);
+  font-style:italic;
+  margin:0 4px;
+}
+
+.hero-left .tagline{
+  font-size:16px;font-weight:300;
+  color:rgba(255,255,255,.65);
+  line-height:1.6;
+  max-width:520px;
+  margin-bottom:28px;
+}
+
+.hero-badges{
+  display:flex;gap:10px;flex-wrap:wrap;
+}
+.badge{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:1px;
+  text-transform:uppercase;
+  border:1px solid rgba(196,130,30,.5);
+  color:rgba(196,130,30,.9);
+  padding:5px 12px;border-radius:3px;
+  background:rgba(196,130,30,.08);
+}
+
+/* Hero right — stat cluster */
+.hero-right{
+  display:flex;flex-direction:column;gap:2px;
+  flex-shrink:0;
+  position:relative;z-index:1;
+}
+.stat-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;
+  padding:16px 22px;
+  text-align:center;
+  backdrop-filter:blur(8px);
+  min-width:150px;
+}
+.stat-card + .stat-card{ margin-top:8px; }
+.stat-num{
+  font-family:var(--mono);
+  font-size:28px;font-weight:700;
+  color:var(--amberL);
+  line-height:1;
+  margin-bottom:4px;
+}
+.stat-lbl{
+  font-size:11px;font-weight:400;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.3px;
+}
+
+/* ════════════════════════════════════
+   SECTION 2 — HOW IT WORKS
+════════════════════════════════════ */
+#how{
+  background:var(--white);
+  padding:44px 60px 40px;
+  border-top:3px solid var(--amber);
+  position:relative;
+}
+
+.section-label{
+  font-family:var(--mono);
+  font-size:9px;letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--ink4);
+  margin-bottom:8px;
+}
+
+.section-title{
+  font-family:var(--serif);
+  font-size:26px;font-weight:700;
+  color:var(--navy);
+  margin-bottom:32px;
+  letter-spacing:-.3px;
+}
+
+.steps-row{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:0;align-items:center;
+}
+
+.step{
+  background:var(--cream);
+  border:1.5px solid #dedad4;
+  border-radius:12px;
+  padding:24px 22px;
+  position:relative;
+}
+.step-num{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--navy);color:#fff;
+  font-family:var(--mono);font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+  position:relative;z-index:1;
+}
+.step-icon{
+  font-size:28px;
+  margin-bottom:10px;
+  display:block;
+}
+.step h3{
+  font-family:var(--serif);
+  font-size:16px;font-weight:600;
+  color:var(--navy);
+  margin-bottom:8px;
+  letter-spacing:-.2px;
+}
+.step p{
+  font-size:12.5px;font-weight:300;
+  color:var(--ink3);line-height:1.6;
+}
+
+.step-highlight{
+  background:var(--amberBg);
+  border-color:rgba(196,130,30,.4);
+}
+.step-highlight .step-num{
+  background:var(--amber);
+}
+
+.arrow-col{
+  display:flex;align-items:center;justify-content:center;
+  padding:0 14px;
+}
+.arrow{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.arrow-line{
+  width:36px;height:2px;
+  background:linear-gradient(90deg,var(--navy2),var(--amber));
+  border-radius:1px;
+  position:relative;
+}
+.arrow-line::after{
+  content:'';
+  position:absolute;right:-6px;top:-4px;
+  border:5px solid transparent;
+  border-left-color:var(--amber);
+  border-right:none;
+}
+.arrow-lbl{
+  font-family:var(--mono);font-size:9px;
+  color:var(--ink4);letter-spacing:.8px;
+  text-transform:uppercase;
+}
+
+/* ════════════════════════════════════
+   SECTION 3 — FEATURES
+════════════════════════════════════ */
+#features{
+  background:var(--cream);
+  padding:40px 60px;
+  border-top:1px solid #dedad4;
+}
+
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:28px;
+}
+
+.feat{
+  background:var(--white);
+  border:1.5px solid #dedad4;
+  border-radius:10px;
+  padding:20px 20px;
+  position:relative;
+  overflow:hidden;
+  transition:all .2s;
+}
+.feat::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:3px;
+  background:var(--amber);
+  border-radius:3px 0 0 3px;
+}
+.feat-icon{
+  font-size:24px;margin-bottom:10px;display:block;
+}
+.feat h4{
+  font-family:var(--serif);
+  font-size:14.5px;font-weight:600;
+  color:var(--navy);
+  margin-bottom:7px;letter-spacing:-.2px;
+}
+.feat p{
+  font-size:12px;font-weight:300;
+  color:var(--ink3);line-height:1.65;
+}
+.feat-tag{
+  display:inline-block;margin-top:10px;
+  font-family:var(--mono);font-size:9px;
+  letter-spacing:1px;text-transform:uppercase;
+  color:var(--amber);
+  background:rgba(196,130,30,.1);
+  padding:2px 7px;border-radius:3px;
+}
+
+/* ════════════════════════════════════
+   SECTION 4 — ARCHITECTURE
+════════════════════════════════════ */
+#arch{
+  background:var(--navy2);
+  padding:36px 60px;
+  position:relative;overflow:hidden;
+}
+#arch::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(196,130,30,.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(30,45,80,.8) 0%, transparent 60%);
+  pointer-events:none;
+}
+
+.arch-inner{
+  position:relative;z-index:1;
+}
+
+.arch-title{
+  font-family:var(--mono);
+  font-size:9px;letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(196,130,30,.8);
+  margin-bottom:24px;
+  text-align:center;
+}
+
+.arch-flow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+}
+
+.arch-node{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  padding:18px 24px;
+  text-align:center;
+  min-width:180px;
+}
+.arch-node.center{
+  background:rgba(196,130,30,.15);
+  border-color:rgba(196,130,30,.4);
+  min-width:200px;
+}
+.arch-node-icon{font-size:26px;margin-bottom:8px;display:block;}
+.arch-node-title{
+  font-family:var(--serif);
+  font-size:14px;font-weight:600;
+  color:#fff;margin-bottom:4px;
+}
+.arch-node-sub{
+  font-family:var(--mono);font-size:10px;
+  color:rgba(255,255,255,.45);letter-spacing:.5px;
+}
+.arch-node.center .arch-node-title{color:var(--amberL);}
+
+.arch-connector{
+  display:flex;flex-direction:column;
+  align-items:center;padding:0 16px;gap:3px;
+}
+.arch-line{
+  width:60px;height:1.5px;
+  background:linear-gradient(90deg,rgba(255,255,255,.15),rgba(196,130,30,.5),rgba(255,255,255,.15));
+  position:relative;
+}
+.arch-dir{
+  font-family:var(--mono);font-size:8px;
+  color:rgba(255,255,255,.3);letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* Arch decorative dots */
+.arch-dots{
+  display:flex;gap:4px;margin-top:6px;
+}
+.arch-dot{width:4px;height:4px;border-radius:50%;}
+.arch-dot.on{background:var(--amberL);}
+.arch-dot.off{background:rgba(255,255,255,.15);}
+
+/* ════════════════════════════════════
+   SECTION 5 — STATS BAR
+════════════════════════════════════ */
+#stats{
+  background:var(--cream2);
+  border-top:1px solid #dedad4;
+  border-bottom:1px solid #dedad4;
+  padding:28px 60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.stat-item{
+  text-align:center;
+  flex:1;
+  position:relative;
+}
+.stat-item+.stat-item::before{
+  content:'';
+  position:absolute;left:0;top:10%;bottom:10%;
+  width:1px;background:#dedad4;
+}
+.big-num{
+  font-family:var(--mono);
+  font-size:36px;font-weight:700;
+  color:var(--navy);
+  line-height:1;
+  margin-bottom:6px;
+  display:block;
+}
+.big-num .unit{font-size:20px;color:var(--amber);}
+.stat-desc{
+  font-size:12px;font-weight:400;
+  color:var(--ink3);
+  letter-spacing:.2px;
+}
+
+/* ════════════════════════════════════
+   SECTION 6 — PRIVACY + FOOTER
+════════════════════════════════════ */
+#footer-section{
+  background:var(--navy);
+  padding:30px 60px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;gap:40px;
+}
+
+.privacy-strip{
+  display:flex;align-items:center;gap:20px;
+}
+
+.priv-item{
+  display:flex;align-items:center;gap:8px;
+}
+.priv-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--amber);flex-shrink:0;
+}
+.priv-text{
+  font-size:12px;font-weight:300;
+  color:rgba(255,255,255,.6);
+}
+.priv-div{width:1px;height:20px;background:rgba(255,255,255,.1);}
+
+.footer-right{
+  text-align:right;
+}
+.footer-logo{
+  font-family:var(--serif);
+  font-size:20px;font-weight:700;
+  color:rgba(255,255,255,.9);
+  letter-spacing:-.2px;
+}
+.footer-logo em{color:var(--amberL);font-style:italic;}
+.footer-sub{
+  font-family:var(--mono);font-size:9px;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.3);margin-top:3px;
+}
+
+/* ════════════════════════════════════
+   DECORATIVE DIVIDERS
+════════════════════════════════════ */
+.gold-divider{
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--amber),var(--gold),transparent);
+}
+</style>
+</head>
+<body>
+
+<!-- ── HERO ───────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg-glyph">×</div>
+
+  <div class="hero-left" style="position:relative;z-index:1;">
+    <p class="eyebrow">Product Overview · 2026</p>
+    <div class="hero-rule"></div>
+    <h1>Tableau <span class="x">×</span> Claude</h1>
+    <p class="tagline">AI-powered workbook intelligence platform. Discover, analyze, and extract insights from Tableau dashboards through natural language — running entirely in your browser with zero infrastructure.</p>
+    <div class="hero-badges">
+      <span class="badge">Client-Side Only</span>
+      <span class="badge">Privacy-First</span>
+      <span class="badge">No Backend Required</span>
+      <span class="badge">Zero Install</span>
+      <span class="badge">Open in Any Browser</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="stat-card">
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">HTML File · No Build Step</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">0</div>
+      <div class="stat-lbl">Servers · No Infrastructure</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">&lt;60s</div>
+      <div class="stat-lbl">Time to First Insight</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">∞</div>
+      <div class="stat-lbl">Workbooks Analyzable</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ── HOW IT WORKS ───────────────────────────── -->
+<section id="how">
+  <p class="section-label">Workflow</p>
+  <h2 class="section-title">How It Works — Three Steps to Insight</h2>
+
+  <div class="steps-row">
+
+    <div class="step">
+      <div class="step-num">01</div>
+      <span class="step-icon">🔍</span>
+      <h3>Search &amp; Select</h3>
+      <p>Search Tableau Public's library of 1M+ community workbooks by topic, or paste any Tableau URL or description directly. No Tableau account required.</p>
+    </div>
+
+    <div class="arrow-col">
+      <div class="arrow">
+        <div class="arch-dots" style="margin:0 0 4px;">
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+          <div class="arch-dot off"></div>
+        </div>
+        <div class="arrow-line"></div>
+        <div class="arrow-lbl">Context</div>
+      </div>
+    </div>
+
+    <div class="step step-highlight">
+      <div class="step-num">02</div>
+      <span class="step-icon">🤖</span>
+      <h3>Claude Analyzes</h3>
+      <p>Claude receives the workbook metadata, description, tags, and view count as structured context — then answers your questions with expert-level Tableau and BI knowledge.</p>
+    </div>
+
+    <div class="arrow-col">
+      <div class="arrow">
+        <div class="arch-dots" style="margin:0 0 4px;">
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+        </div>
+        <div class="arrow-line"></div>
+        <div class="arrow-lbl">Insights</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">03</div>
+      <span class="step-icon">💡</span>
+      <h3>Discover &amp; Export</h3>
+      <p>Get structured AI analysis: data story, visualization techniques, business insights, and improvement recommendations. Export the full conversation as a text report.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FEATURES ───────────────────────────────── -->
+<section id="features">
+  <p class="section-label">Capabilities</p>
+  <h2 class="section-title">Six Core Capabilities</h2>
+
+  <div class="features-grid">
+
+    <div class="feat">
+      <span class="feat-icon">🌐</span>
+      <h4>Live Tableau Public Search</h4>
+      <p>Search 1M+ community workbooks in real-time via Tableau's public API. Filter by topic, industry, or technique with instant result rendering.</p>
+      <span class="feat-tag">Live API</span>
+    </div>
+
+    <div class="feat">
+      <span class="feat-icon">🧠</span>
+      <h4>Claude AI Analysis</h4>
+      <p>Powered by Anthropic's Claude Sonnet 4. Expert-level understanding of Tableau concepts: LOD expressions, table calcs, data modeling, and visualization theory.</p>
+      <span class="feat-tag">LLM-Powered</span>
+    </div>
+
+    <div class="feat">
+      <span class="feat-icon">💬</span>
+      <h4>Multi-Turn Conversation</h4>
+      <p>Full context-aware dialogue — Claude remembers every message in the session. Ask follow-ups, drill deeper, and refine your understanding iteratively.</p>
+      <span class="feat-tag">Stateful</span>
+    </div>
+
+    <div class="feat">
+      <span class="feat-icon">📋</span>
+      <h4>Manual Context Mode</h4>
+      <p>Paste any Tableau URL, workbook description, or data context directly. Analyze private, on-premise, or Desktop workbooks without any API authentication.</p>
+      <span class="feat-tag">Flexible Input</span>
+    </div>
+
+    <div class="feat">
+      <span class="feat-icon">📤</span>
+      <h4>Export &amp; Share</h4>
+      <p>Download the complete conversation as a formatted text report. Document your analysis, share findings with stakeholders, or build training materials.</p>
+      <span class="feat-tag">Portable Output</span>
+    </div>
+
+    <div class="feat">
+      <span class="feat-icon">🔒</span>
+      <h4>Privacy-First Architecture</h4>
+      <p>Your API key lives only in session memory — cleared when the tab closes. No analytics, no tracking, no data retention. Zero telemetry by design.</p>
+      <span class="feat-tag">Session-Only</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ARCHITECTURE ───────────────────────────── -->
+<section id="arch">
+  <div class="arch-inner">
+    <p class="arch-title">Technical Architecture · Browser-Direct Integration</p>
+
+    <div class="arch-flow">
+
+      <div class="arch-node">
+        <span class="arch-node-icon">📊</span>
+        <div class="arch-node-title">Tableau Public</div>
+        <div class="arch-node-sub">REST Search API<br>No Auth · CORS Public</div>
+        <div class="arch-dots" style="margin-top:10px;justify-content:center;">
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+          <div class="arch-dot off"></div>
+        </div>
+      </div>
+
+      <div class="arch-connector">
+        <div class="arch-line"></div>
+        <div class="arch-dir">Metadata</div>
+      </div>
+
+      <div class="arch-node center">
+        <span class="arch-node-icon">🌐</span>
+        <div class="arch-node-title">Your Browser</div>
+        <div class="arch-node-sub">index.html · Vanilla JS<br>sessionStorage · No Build</div>
+        <div class="arch-dots" style="margin-top:10px;justify-content:center;">
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+        </div>
+      </div>
+
+      <div class="arch-connector">
+        <div class="arch-line"></div>
+        <div class="arch-dir">Messages</div>
+      </div>
+
+      <div class="arch-node">
+        <span class="arch-node-icon">🤖</span>
+        <div class="arch-node-title">Anthropic Claude</div>
+        <div class="arch-node-sub">/v1/messages · Sonnet 4<br>Browser-Direct Access</div>
+        <div class="arch-dots" style="margin-top:10px;justify-content:center;">
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+          <div class="arch-dot on"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS BAR ─────────────────────────────── -->
+<section id="stats">
+
+  <div class="stat-item">
+    <span class="big-num">1<span class="unit">M+</span></span>
+    <div class="stat-desc">Tableau Public Workbooks Searchable</div>
+  </div>
+
+  <div class="stat-item">
+    <span class="big-num">0<span class="unit"> servers</span></span>
+    <div class="stat-desc">Zero Infrastructure Required</div>
+  </div>
+
+  <div class="stat-item">
+    <span class="big-num">3<span class="unit"> models</span></span>
+    <div class="stat-desc">Claude Haiku · Sonnet · Opus</div>
+  </div>
+
+  <div class="stat-item">
+    <span class="big-num">4<span class="unit">k</span></span>
+    <div class="stat-desc">Max Tokens per Response</div>
+  </div>
+
+  <div class="stat-item">
+    <span class="big-num">&lt;60<span class="unit">s</span></span>
+    <div class="stat-desc">From Open to First Insight</div>
+  </div>
+
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<div class="gold-divider"></div>
+<section id="footer-section">
+
+  <div class="privacy-strip">
+    <div class="priv-item">
+      <div class="priv-dot"></div>
+      <div class="priv-text">API keys stored in sessionStorage only — auto-cleared on tab close</div>
+    </div>
+    <div class="priv-div"></div>
+    <div class="priv-item">
+      <div class="priv-dot"></div>
+      <div class="priv-text">No analytics, tracking, or third-party telemetry</div>
+    </div>
+    <div class="priv-div"></div>
+    <div class="priv-item">
+      <div class="priv-dot"></div>
+      <div class="priv-text">Conversations never stored beyond the session</div>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-logo">Tableau <em>×</em> Claude</div>
+    <div class="footer-sub">AI Workbook Intelligence · 2026</div>
+  </div>
+
+</section>
+
+
+
+</body></html>
