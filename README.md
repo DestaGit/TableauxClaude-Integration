@@ -1,7 +1,7 @@
 # TableauxClaude-Integration
 
 1. Executive Summary
-2. 
+   
 Tableau × Claude is a fully client-side, zero-backend web application that bridges the gap between Tableau's world-class data visualization ecosystem and Anthropic's Claude large language model. The application enables data analysts, business intelligence professionals, and non-technical stakeholders to discover, explore, and extract deep insights from Tableau Public workbooks through a natural language conversational interface — all running entirely in the browser with no server infrastructure required.
 
 Key Value Propositions
